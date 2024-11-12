@@ -11,12 +11,24 @@
 			"item": [
 				{
 					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\":\"executor@gmail.com\",\n    \"password\":\"111222336\"\n}",
+							"raw": "{\n    \"email\":\"executor@gmail.com\",\n    // \"password\":\"111222336\",\n    \"password\":\"adminadmin@\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -195,7 +207,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"email\":\"executor@gmail.com\",\n    \"password\":\"111222336\"\n}",
+									"raw": "{\n    \"email\":\"executor@gmail.com\",\n    \"password\":\"adminadmin@\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -483,8 +495,221 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": 3,\n            \"name\": \"manager\",\n            \"email\": \"manager@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"111222335\",\n            \"created_at\": \"2024-10-17T09:34:31.000000Z\",\n            \"updated_at\": \"2024-10-17T09:34:31.000000Z\",\n            \"role_id\": 3,\n            \"role\": {\n                \"id\": 3,\n                \"name\": \"task_manager\",\n                \"created_at\": \"2024-10-17T09:34:30.000000Z\",\n                \"updated_at\": \"2024-10-17T09:34:30.000000Z\"\n            }\n        },\n        \"authorisation\": {\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTY0MjkzLCJleHAiOjE3MjkxNjc4OTMsIm5iZiI6MTcyOTE2NDI5MywianRpIjoidGN1S2RkMThJYWxYMUtJbSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mhroSRVLwmZ3N8_LanS0bF1uv0jSu1Fg0K5OX5RCJWg\",\n            \"type\": \"bearer\"\n        }\n    },\n    \"message\": \"trans.method.POST.success\"\n}"
+						},
+						{
+							"name": "api test success login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"executor@gmail.com\",\n    \"password\":\"111222336\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/login",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 12 Nov 2024 09:29:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"user\": {\n            \"id\": 4,\n            \"name\": \"executor\",\n            \"email\": \"executor@gmail.com\",\n            \"email_verified_at\": null,\n            \"national_id\": \"111222336\",\n            \"created_at\": \"2024-10-17T09:34:32.000000Z\",\n            \"updated_at\": \"2024-10-17T09:34:32.000000Z\",\n            \"role_id\": 4,\n            \"role\": {\n                \"id\": 4,\n                \"name\": \"task_executor\",\n                \"created_at\": \"2024-10-17T09:34:30.000000Z\",\n                \"updated_at\": \"2024-10-17T09:34:30.000000Z\"\n            }\n        },\n        \"authorisation\": {\n            \"token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDAzNzQ0LCJleHAiOjE3MzE0MDczNDQsIm5iZiI6MTczMTQwMzc0NCwianRpIjoiRHBnWHBUQjM5alZDcjBMRCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.QN1vSkIxGD9YXb7EPgN-AKlIlagUhE6DsyhxsKH7PBM\",\n            \"type\": \"bearer\"\n        }\n    },\n    \"message\": \"trans.method.POST.success\"\n}"
 						}
 					]
+				},
+				{
+					"name": "login successfully test api",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response should be JSON with success\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.expect(jsonData).to.have.property(\"success\", true);",
+									"  pm.expect(jsonData).to.have.property(\"message\", \"trans.method.POST.success\");",
+									"  pm.expect(jsonData.data).to.have.property(\"user\");",
+									"  pm.expect(jsonData.data.user).to.have.property(\"email\", \"executor@gmail.com\");",
+									"  pm.expect(jsonData.data).to.have.property(\"authorisation\");",
+									"  pm.expect(jsonData.data.authorisation).to.have.property(\"token\");",
+									"  pm.expect(jsonData.data.authorisation).to.have.property(\"type\", \"bearer\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"executor@gmail.com\",\n    \"password\":\"111222336\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login invalid data test api",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 402\", function () {",
+									"  pm.response.to.have.status(402);",
+									"});",
+									"",
+									"",
+									"",
+									"pm.test(\"Validation error for invalid email\", function () {",
+									"  var jsonData = pm.response.json();",
+									"  pm.expect(jsonData).to.have.property(\"success\", false);",
+									"  pm.expect(jsonData.message).to.have.property(\"email\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"executorgmail.com\",\n    \"password\":\"111222336\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/api/login",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
 				},
 				{
 					"name": "logout",
@@ -668,7 +893,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI2NDgwNTk5LCJleHAiOjE3MjY0ODQxOTksIm5iZiI6MTcyNjQ4MDU5OSwianRpIjoiRWloOUVFek5kRFVoMmJNcyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.3IQyEa39xV72SvPJCR8vyMSY0TFO20uqzZz3obgnfMc",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDExNTQ5LCJleHAiOjE3MzE0MTUxNDksIm5iZiI6MTczMTQxMTU0OSwianRpIjoiMTg0enFRakIxWGhQYzQ1ZSIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.KAqzKVtwznSNkr6VQUaKE2p7GFqUZf-i9RIWi1P7FZk",
 									"type": "string"
 								}
 							]
@@ -837,11 +1062,21 @@
 				{
 					"name": "Change Password",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDA5MjMxLCJleHAiOjE3MzE0MTI4MzEsIm5iZiI6MTczMTQwOTIzMSwianRpIjoicjJYYjN0Z1pLbkx5Zm5adiIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.GpUqPEDnt1Q6OXVFBEQIOiYBIFhrdUmrUTnrAdtUZqA",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"old_password\":\"123123123\",\n    \"password\":\"123123\",\n    \"password_confirmation\":\"123123\"\n\n}",
+							"raw": "{\n    \"old_password\":\"111222336\",\n    \"password\":\"adminadmin@\",\n    \"password_confirmation\":\"adminadmin@\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1089,7 +1324,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTAzMzczLCJleHAiOjE3MjkxMDY5NzMsIm5iZiI6MTcyOTEwMzM3MywianRpIjoiWFViRW5PaEpqWDR2N05KNSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uO2XHwbYXyLzOHN5lDp2ffMPvGn9sQP2AzMW4kerE90",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDA3MzIwLCJleHAiOjE3MzE0MTA5MjAsIm5iZiI6MTczMTQwNzMyMCwianRpIjoiMTlZOVRZblVDakdycFU2YSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.pu7FLgPNqm9EiYoXhy9Pz-XljSkOdmG3bRoo18_Wa-A",
 									"type": "string"
 								}
 							]
@@ -1104,7 +1339,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"name\":\"rama\",\n    \"email\":\"rama@gmail.com\",\n    \"national_id\":\"123123123\",\n    \"role_id\":3\n}",
+							"raw": "{\n    \"name\":\"rama\"\n    \"email\":\"rama@gmail.com\",\n    \"national_id\":\"123123123\",\n    \"role_id\":3\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1377,13 +1612,40 @@
 			"item": [
 				{
 					"name": "store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Task created successfully\", function () {",
+									"    pm.response.to.have.jsonBody('success');",
+									"    pm.expect(pm.response.json().success).to.eql(true);",
+									"});",
+									"",
+									"pm.test(\"Task contains the correct fields\", function () {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(responseJson.data).to.have.property(\"id\");",
+									"    pm.expect(responseJson.data).to.have.property(\"title\", \"Task 6\");",
+									"    pm.expect(responseJson.data).to.have.property(\"status\", \"open\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTY4NDg3LCJleHAiOjE3MjkxNzIwODcsIm5iZiI6MTcyOTE2ODQ4NywianRpIjoiR3FDdVU3YWc2VzJQSHF3NyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.VPJNyRZMF8Y82HT9miLGLQEC6C-Hq9UGyrwF4jNW5UE",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE4NzYwLCJleHAiOjE3MzE0MjIzNjAsIm5iZiI6MTczMTQxODc2MCwianRpIjoiRmNCbUlKb1VFS3JneDJjcyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ESPdgwqDQB9BZjq0ADmd7l2PLsEK6o3dJLzQXtrgckw",
 									"type": "string"
 								}
 							]
@@ -1782,13 +2044,33 @@
 				},
 				{
 					"name": "index",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response contains tasks data\", function () {",
+									"    pm.response.to.have.jsonBody('data');",
+									"});",
+									"",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTY0MjkzLCJleHAiOjE3MjkxNjc4OTMsIm5iZiI6MTcyOTE2NDI5MywianRpIjoidGN1S2RkMThJYWxYMUtJbSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.mhroSRVLwmZ3N8_LanS0bF1uv0jSu1Fg0K5OX5RCJWg",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE4MzgyLCJleHAiOjE3MzE0MjE5ODIsIm5iZiI6MTczMTQxODM4MiwianRpIjoiR2NuSU15RW1DRm5pOFBSTSIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.BRQCtGWTmVkUX_V5PayfFxGQGIZTUxOxaNSj8dJM-Vg",
 									"type": "string"
 								}
 							]
@@ -1796,7 +2078,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/tasks",
+							"raw": "http://127.0.0.1:8000/api/tasks?depends_on=2",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -1808,12 +2090,33 @@
 							"path": [
 								"api",
 								"tasks"
+							],
+							"query": [
+								{
+									"key": "priority",
+									"value": "high",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "open",
+									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "bug",
+									"disabled": true
+								},
+								{
+									"key": "depends_on",
+									"value": "2"
+								}
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "all data",
+							"name": "all tasks",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -1830,6 +2133,13 @@
 									"path": [
 										"api",
 										"tasks"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
 									]
 								}
 							},
@@ -1855,11 +2165,138 @@
 								},
 								{
 									"key": "Date",
-									"value": "Thu, 17 Oct 2024 11:39:57 GMT"
+									"value": "Mon, 11 Nov 2024 23:06:31 GMT"
 								},
 								{
 									"key": "Content-Type",
 									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"Task 5\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:10:29.000000Z\",\n            \"updated_at\": \"2024-10-17T11:10:29.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Task 4\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": 4,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:21.000000Z\",\n            \"updated_at\": \"2024-10-17T14:56:05.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Task 3\",\n            \"description\": \"new task type feature\",\n            \"type\": \"bug\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:03.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"completed\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:35.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"completed\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-11-11 21:45:02\",\n            \"assigned_to\": 4,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:27.000000Z\",\n            \"updated_at\": \"2024-11-11T21:45:02.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "high filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks?priority=high",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "priority",
+											"value": "high"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Nov 2024 23:17:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
 								},
 								{
 									"key": "X-RateLimit-Limit",
@@ -1875,19 +2312,376 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:27.000000Z\",\n            \"updated_at\": \"2024-10-17T11:06:27.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:35.000000Z\",\n            \"updated_at\": \"2024-10-17T11:06:35.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Task 3\",\n            \"description\": \"new task type feature\",\n            \"type\": \"bug\",\n            \"status\": \"blocked\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:03.000000Z\",\n            \"updated_at\": \"2024-10-17T11:07:03.000000Z\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"Task 4\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"blocked\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:21.000000Z\",\n            \"updated_at\": \"2024-10-17T11:07:21.000000Z\"\n        },\n        {\n            \"id\": 5,\n            \"title\": \"Task 5\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:10:29.000000Z\",\n            \"updated_at\": \"2024-10-17T11:10:29.000000Z\"\n        },\n        {\n            \"id\": 6,\n            \"title\": \"Task 6\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"blocked\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:10:55.000000Z\",\n            \"updated_at\": \"2024-10-17T11:10:55.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"Task 5\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:10:29.000000Z\",\n            \"updated_at\": \"2024-10-17T11:10:29.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Task 3\",\n            \"description\": \"new task type feature\",\n            \"type\": \"bug\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:03.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"completed\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-11-11 21:45:02\",\n            \"assigned_to\": 4,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:27.000000Z\",\n            \"updated_at\": \"2024-11-11T21:45:02.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "multi filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks?priority=high&status=open&type=bug",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "priority",
+											"value": "high"
+										},
+										{
+											"key": "status",
+											"value": "open"
+										},
+										{
+											"key": "type",
+											"value": "bug"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Nov 2024 23:18:44 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"Task 3\",\n            \"description\": \"new task type feature\",\n            \"type\": \"bug\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:03.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "depends null",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks?depends_on=",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "priority",
+											"value": "high",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "open",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "bug",
+											"disabled": true
+										},
+										{
+											"key": "depends_on",
+											"value": ""
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Nov 2024 23:20:07 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 5,\n            \"title\": \"Task 5\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:10:29.000000Z\",\n            \"updated_at\": \"2024-10-17T11:10:29.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Task 2\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"completed\",\n            \"priority\": \"medium\",\n            \"due_date\": null,\n            \"assigned_to\": 1,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:35.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Task 1\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"completed\",\n            \"priority\": \"high\",\n            \"due_date\": \"2024-11-11 21:45:02\",\n            \"assigned_to\": 4,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:06:27.000000Z\",\n            \"updated_at\": \"2024-11-11T21:45:02.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
+						},
+						{
+							"name": "depends on task 2",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:8000/api/tasks?depends_on=2",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "8000",
+									"path": [
+										"api",
+										"tasks"
+									],
+									"query": [
+										{
+											"key": "priority",
+											"value": "high",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "open",
+											"disabled": true
+										},
+										{
+											"key": "type",
+											"value": "bug",
+											"disabled": true
+										},
+										{
+											"key": "depends_on",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Host",
+									"value": "127.0.0.1:8000"
+								},
+								{
+									"key": "Connection",
+									"value": "close"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.12"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 11 Nov 2024 23:24:04 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "deny"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'none'; style-src 'self'; form-action 'self'"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "1; mode=block"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 4,\n            \"title\": \"Task 4\",\n            \"description\": \"new task type feature\",\n            \"type\": \"feature\",\n            \"status\": \"open\",\n            \"priority\": \"low\",\n            \"due_date\": null,\n            \"assigned_to\": 4,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:21.000000Z\",\n            \"updated_at\": \"2024-10-17T14:56:05.000000Z\"\n        },\n        {\n            \"id\": 3,\n            \"title\": \"Task 3\",\n            \"description\": \"new task type feature\",\n            \"type\": \"bug\",\n            \"status\": \"open\",\n            \"priority\": \"high\",\n            \"due_date\": null,\n            \"assigned_to\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-10-17T11:07:03.000000Z\",\n            \"updated_at\": \"2024-10-17T15:15:43.000000Z\"\n        }\n    ],\n    \"message\": \"trans.method.GET.success\"\n}"
 						}
 					]
 				},
 				{
 					"name": "show",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Response contains task details\", function () {",
+									"    const responseJson = pm.response.json();",
+									"    pm.expect(responseJson.data).to.have.property(\"id\");",
+									"    pm.expect(responseJson.data).to.have.property(\"title\");",
+									"    pm.expect(responseJson.data).to.have.property(\"description\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTg2MDE5LCJleHAiOjE3MjkxODk2MTksIm5iZiI6MTcyOTE4NjAxOSwianRpIjoia3ZuU05UMVJ5dDhkN1NTVCIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.GxgVke-xoCWCb-dbp6KKlLG7A6FRG5YqY9zAIPdWfwo",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE4NzYwLCJleHAiOjE3MzE0MjIzNjAsIm5iZiI6MTczMTQxODc2MCwianRpIjoiRmNCbUlKb1VFS3JneDJjcyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ESPdgwqDQB9BZjq0ADmd7l2PLsEK6o3dJLzQXtrgckw",
 									"type": "string"
 								}
 							]
@@ -2114,13 +2908,33 @@
 				},
 				{
 					"name": "progress task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Task status updated to in progress\", function () {",
+									"    pm.response.to.have.jsonBody('message');",
+									"    pm.expect(pm.response.json().message).to.eql(\"updated status to in progress successfully\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTcyMjY3LCJleHAiOjE3MjkxNzU4NjcsIm5iZiI6MTcyOTE3MjI2NywianRpIjoib2xMbDJ3SkNOQmpmR2J0RyIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.0LuzbRKNgn3EQMcD5CKBD9YHFd8ix0eH4GS_Wz7rkSw",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE5NzkzLCJleHAiOjE3MzE0MjMzOTMsIm5iZiI6MTczMTQxOTc5MywianRpIjoiMDZJeTFRM244WGdYOVpxaiIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.akLH9WV86FlhtrW3vTCLIcuNmsJKPBQ67d1VDXwxYx0",
 									"type": "string"
 								}
 							]
@@ -2128,7 +2942,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/tasks/1/progress",
+							"raw": "http://127.0.0.1:8000/api/tasks/12/progress",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -2140,7 +2954,7 @@
 							"path": [
 								"api",
 								"tasks",
-								"1",
+								"12",
 								"progress"
 							]
 						}
@@ -2284,13 +3098,33 @@
 				},
 				{
 					"name": "completed task",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Task completed successfully\", function () {",
+									"    pm.response.to.have.jsonBody('message');",
+									"    pm.expect(pm.response.json().message).to.eql(\"completed task successfully\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTc0NTcwLCJleHAiOjE3MjkxNzgxNzAsIm5iZiI6MTcyOTE3NDU3MCwianRpIjoiM2dDb3gwemhlY0t4RmJSMSIsInN1YiI6IjEiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.Acn3Gg_XzIb6KGa1yxWr77LlpeAdI86-p_YYvQJtkiA",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE5NzkzLCJleHAiOjE3MzE0MjMzOTMsIm5iZiI6MTczMTQxOTc5MywianRpIjoiMDZJeTFRM244WGdYOVpxaiIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.akLH9WV86FlhtrW3vTCLIcuNmsJKPBQ67d1VDXwxYx0",
 									"type": "string"
 								}
 							]
@@ -2298,7 +3132,7 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/tasks/1/completed",
+							"raw": "http://127.0.0.1:8000/api/tasks/12/completed",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -2310,7 +3144,7 @@
 							"path": [
 								"api",
 								"tasks",
-								"1",
+								"12",
 								"completed"
 							]
 						}
@@ -2387,13 +3221,33 @@
 				},
 				{
 					"name": "reassign",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Task reassigned successfully\", function () {",
+									"    pm.response.to.have.jsonBody('message');",
+									"    pm.expect(pm.response.json().message).to.eql(\"reassign successfully\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTc4MTIxLCJleHAiOjE3MjkxODE3MjEsIm5iZiI6MTcyOTE3ODEyMSwianRpIjoiRkNCdzcwWGROR1FFRUM3UiIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.D5PKXf8_Y9FqUHhEtBnMQZQvU11Ufr0tc0fRmtPrBck",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE5MzUwLCJleHAiOjE3MzE0MjI5NTAsIm5iZiI6MTczMTQxOTM1MCwianRpIjoid1JadU5JUlBnRUFDanJpOSIsInN1YiI6IjMiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.yIIJi7XeSYH5Ukr-1hdZb0vt5hnLPnJuPcnNPJ62jJY",
 									"type": "string"
 								}
 							]
@@ -2552,13 +3406,34 @@
 				},
 				{
 					"name": "delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Task deleted successfully\", function () {",
+									"    pm.response.to.have.jsonBody('success');",
+									"    pm.expect(pm.response.json().success).to.eql(true);",
+									"    pm.expect(pm.response.json().message).to.eql(\"deleted successfully\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTg2Nzk1LCJleHAiOjE3MjkxOTAzOTUsIm5iZiI6MTcyOTE4Njc5NSwianRpIjoiWHNOc0VGV3IxRFA5TTMwbSIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.pJvzg_x9faBrmJUu-nrtnt5dvdoZ477y6DWDxF9Hu0g",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzMxNDE4NzYwLCJleHAiOjE3MzE0MjIzNjAsIm5iZiI6MTczMTQxODc2MCwianRpIjoiRmNCbUlKb1VFS3JneDJjcyIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.ESPdgwqDQB9BZjq0ADmd7l2PLsEK6o3dJLzQXtrgckw",
 									"type": "string"
 								}
 							]
@@ -2566,7 +3441,7 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "http://127.0.0.1:8000/api/tasks/6",
+							"raw": "http://127.0.0.1:8000/api/tasks/5",
 							"protocol": "http",
 							"host": [
 								"127",
@@ -2578,7 +3453,7 @@
 							"path": [
 								"api",
 								"tasks",
-								"6"
+								"5"
 							]
 						}
 					},
@@ -2725,11 +3600,21 @@
 				{
 					"name": "store",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTgwNzk2LCJleHAiOjE3MjkxODQzOTYsIm5iZiI6MTcyOTE4MDc5NiwianRpIjoiZ2swUVQxSkNQc3F5TGFSRiIsInN1YiI6IjIiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.6repD7nWWKKJ5Cta3Qx5DZ8SIt5wUPs0g43vrbtSvxI",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"content\":\"comment task 1\"\n}",
+							"raw": "{\n    \"content\":\"comment 2 task 1\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -2972,6 +3857,16 @@
 				{
 					"name": "store",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNzI5MTg0MDQzLCJleHAiOjE3MjkxODc2NDMsIm5iZiI6MTcyOTE4NDA0MywianRpIjoiRGl3U25GUDlselRIald5aiIsInN1YiI6IjQiLCJwcnYiOiIyM2JkNWM4OTQ5ZjYwMGFkYjM5ZTcwMWM0MDA4NzJkYjdhNTk3NmY3In0.uHvaJwj6ie6RuRPIZyj2jzoTqfgeD-xp3RS49LxFa3A",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
 						"header": [],
 						"body": {
@@ -2980,7 +3875,7 @@
 								{
 									"key": "file",
 									"type": "file",
-									"src": []
+									"src": "/home/rima/Downloads/run-back.png.txt"
 								}
 							]
 						},
