@@ -29,12 +29,14 @@ class SendEmailJob implements ShouldQueue
      */
     public function handle(): void
     {
-        $tasks = Task::query()->whereNot('status', 'complete')->with('taskStatusUpdates')->get();
+        $uncompleted_tasks = Task::query()->whereNot('status', 'completed')->with('taskStatusUpdates')->get();
+        $completed_tasks = Task::query()->whereDate('due_date', \Carbon\Carbon::now()->format('Y-m-d'))->get();
+
         $users = User::query()->whereRelation('role', function ($q) {
             return $q->where('name', 'task_builder');
         })->pluck('email');
         foreach ($users as $user) {
-            Mail::to($user)->send(new SendEmail($tasks));
+            Mail::to($user)->send(new SendEmail($uncompleted_tasks, $completed_tasks));
         }
     }
 }

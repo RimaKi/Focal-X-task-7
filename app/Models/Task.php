@@ -72,5 +72,4 @@ class Task extends Model
         return $this->morphMany(Attachment::class, 'attachable');
     }
 
-
 }

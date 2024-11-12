@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 
 //Rate limiting middleware by laravel
-Route::middleware(['throttle:30,1'])->group(function () {
+Route::middleware(['throttle:custom_rate_limit'])->group(function () {
 
     Route::post('login', [AuthController::class, 'login']);
 
@@ -38,4 +38,6 @@ Route::middleware(['throttle:30,1'])->group(function () {
         Route::post('/comments/{task}', [CommentController::class, 'store']);
         Route::post('/attachments/{task}', [AttachmentController::class, 'store']);
     });
+
 });
+

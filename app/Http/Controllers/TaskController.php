@@ -28,19 +28,9 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $data = Cache::remember('tasks', 3600, function () {
-            return Task::latest();
-        });
-        if ($request->has('status')) {
-            $data = $data->where('status', $request->status);
-        }
-        if ($request->has('type')) {
-            $data = $data->where('type', $request->type);
-        }
-        if ($request->has('priority')) {
-            $data = $data->where('priority', $request->priority);
-        }
-        return $data->get();
+        $data = $request->only(['type', 'status', 'assigned_to', 'due_date', 'priority', 'depends_on']);
+        $tasks = $this->taskService->tasksList($data);
+        return $tasks;
     }
 
     /**
@@ -54,7 +44,6 @@ class TaskController extends Controller
     public function store(StoreRequest $request)
     {
         $data = $request->validationData();
-        Cache::forget('tasks');
         return $this->taskService->store($data);
     }
 
@@ -89,6 +78,7 @@ class TaskController extends Controller
         if (!$task->delete()) {
             throw new \Exception('wrong in delete');
         }
+        Cache::flush();
         return 'deleted successfully';
     }
 
@@ -99,7 +89,7 @@ class TaskController extends Controller
     public function progressTask(Task $task)
     {
         $task->update(['status' => 'inProgress']);
-        Cache::forget("task_$task->id");
+        Cache::flush();
         return 'updated status to in progress successfully';
     }
 
@@ -113,7 +103,7 @@ class TaskController extends Controller
             'due_date' => Carbon::now(),
             'status' => 'completed'
         ]);
-        Cache::forget("task_$task->id");
+        Cache::flush();
         return 'completed task successfully';
     }
 
@@ -128,7 +118,8 @@ class TaskController extends Controller
         if (!$task->update(['assigned_to' => $user->id])) {
             throw new \Exception('reassign error');
         }
-        Cache::forget("task_$task->id");
+        Cache::flush();
         return 'reassign successfully';
     }
+
 }

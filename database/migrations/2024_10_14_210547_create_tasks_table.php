@@ -4,8 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
-{
+return new class extends Migration {
     /**
      * Run the migrations.
      */
@@ -15,13 +14,15 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->enum('type',['bug', 'feature', 'improvement']);
-            $table->enum('status',['open','inProgress','completed','blocked'])->default('open');
-            $table->enum('priority',['low','medium','high'])->default('medium');
+            $table->enum('type', ['bug', 'feature', 'improvement']);
+            $table->enum('status', ['open', 'inProgress', 'completed', 'blocked'])->default('open');
+            $table->enum('priority', ['low', 'medium', 'high'])->default('medium');
             $table->dateTime('due_date')->nullable();
             $table->foreignId('assigned_to')->nullable()->constrained('users');
             $table->softDeletes();
             $table->timestamps();
+
+            $table->index(['title', 'status']);
         });
     }
 

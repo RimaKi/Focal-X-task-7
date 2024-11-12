@@ -12,14 +12,16 @@ class SendEmail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    protected $tasks;
+    protected $uncompleted_tasks;
+    protected $completed_tasks;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($tasks)
+    public function __construct($uncompleted_tasks,$completed_tasks)
     {
-        $this->report = $tasks;
+        $this->uncompleted_tasks = $uncompleted_tasks;
+        $this->completed_tasks = $completed_tasks;
     }
 
     /**
@@ -39,7 +41,7 @@ class SendEmail extends Mailable
     {
         return new Content(
             view: 'Emails.report',
-            with: ['tasks' => $this->report]
+            with: ['uncompleted_tasks' => $this->uncompleted_tasks,'completed_tasks'=>$this->completed_tasks]
         );
     }
 
